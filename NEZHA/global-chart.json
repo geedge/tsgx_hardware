@@ -1,7 +1,7 @@
 [
 	{
 		"name":"TSG-X Status (Global)",
-		"type":"dashboard",
+		"type":"template",
 		"varType":0,
 		"param":{
 			"chartShare":"none",
