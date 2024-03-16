@@ -1012,7 +1012,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.26",
+				"y":"4.34",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -3174,7 +3174,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.53",
+				"y":"4.68",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -4567,7 +4567,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"02097f7"
+									"id":"1036a6d9"
 								}
 							],
 							"thresholdShow":true,
@@ -4599,6 +4599,468 @@
 							}
 						],
 						"datasource":"metrics"
+					},
+					{
+						"name":"Trusted Certificate Authorities",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":52,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"6649c37"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"6.0",
+						"y":"6.0",
+						"elements":[
+							{
+								"expression":"sum(tfe3a_trusted_cert_nums{asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}",
+								"name":"A",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Log Num/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":53,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"017a327"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"9.0",
+						"y":"6.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_log_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-sum",
+								"name":"sum",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Policy Manipulation/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":54,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"02ea2d2"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"8.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-monitor",
+								"name":"monitor",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_deny_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-deny",
+								"name":"deny",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rdirt_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-redirect",
+								"name":"redirect",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_repl_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-replace",
+								"name":"replace",
+								"orderNum":3,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_hijk_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-hijack",
+								"name":"hijack",
+								"orderNum":4,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_ins_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-insert",
+								"name":"insert",
+								"orderNum":5,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_allow_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-allow",
+								"name":"allow",
+								"orderNum":6,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-edit element",
+								"name":"edit element",
+								"orderNum":7,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rus_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-run script",
+								"name":"run script",
+								"orderNum":8,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"CertStore CPU",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"percent(0.0-1.0)",
+						"weight":55,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"fa0eeb9"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"8.0",
+						"elements":[
+							{
+								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"certstore\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}",
+								"name":"A",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"certstore\"}[2m]))",
+								"legend":"sum",
+								"name":"B",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
 					}
 				]
 			},
@@ -4608,7 +5070,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":52,
+				"weight":56,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -4657,17 +5119,17 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"12.79",
+				"y":"15.02",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
 					{
-						"name":"Session/s (Open)",
-						"span":"6.0",
+						"name":"Session/s",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":53,
+						"weight":57,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -4702,10 +5164,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -4721,7 +5183,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"7ce2f450"
+									"id":"67b45fde"
 								}
 							],
 							"thresholdShow":true,
@@ -4738,126 +5200,23 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"32.0",
+						"x":"6.0",
+						"y":"0.0",
 						"elements":[
 							{
 								"expression":"sum(irate(shaping_global_ctrl_active{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"legend":"{{serviceFunction}}-Open",
+								"name":"Open",
 								"orderNum":0,
 								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
 							},
-							{
-								"expression":"sum(irate(shaping_global_ctrl_active{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Session/s (Close)",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":54,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"b1ac6e1"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"34.0",
-						"elements":[
 							{
 								"expression":"sum(irate(shaping_global_ctrl_sf_close{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_ctrl_sf_close{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"legend":"{{serviceFunction}}-Close",
+								"name":"Close",
 								"orderNum":1,
 								"id":"",
 								"state":1,
@@ -4869,11 +5228,11 @@
 					},
 					{
 						"name":"Sessions (Concurrent)",
-						"span":"6.0",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":55,
+						"weight":58,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -4944,8 +5303,8 @@
 							"nullType":"null"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"36.0",
+						"x":"9.0",
+						"y":"0.0",
 						"elements":[
 							{
 								"expression":"sum(shaping_global_curr_session_num{asset=\"{{asset.name}}\"}) by(serviceFunction)",
@@ -4972,11 +5331,11 @@
 					},
 					{
 						"name":"Queueing packets",
-						"span":"6.0",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":56,
+						"weight":59,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5047,8 +5406,8 @@
 							"nullType":"null"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"38.0",
+						"x":"6.0",
+						"y":"2.0",
 						"elements":[
 							{
 								"expression":"sum(shaping_global_curr_queueing_pkts{asset=\"{{asset.name}}\"}) by(serviceFunction)",
@@ -5074,317 +5433,8 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Hit policy rx pkts",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":57,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"d23b1c6"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"40.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_shape_rx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_shape_rx_pkts{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Hit policy rx bytes",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"bytes/sec(SI)",
-						"weight":58,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"2e149ad3"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"0.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Hit policy tx pkts",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":59,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"b3a6ee0"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"2.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_shape_tx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_shape_tx_pkts{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Hit policy tx bytes",
-						"span":"6.0",
+						"name":"Policy hits(bytes)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes/sec(SI)",
@@ -5423,10 +5473,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5442,7 +5492,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"7121c8b"
+									"id":"7ade8dd4"
 								}
 							],
 							"thresholdShow":true,
@@ -5459,13 +5509,13 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"4.0",
+						"x":"3.0",
+						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_shape_rx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-RX",
+								"name":"RX",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5473,10 +5523,20 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_bytes{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_shape_tx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-TX",
+								"name":"TX",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-DROP",
+								"name":"DROP",
+								"orderNum":2,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -5486,8 +5546,8 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Hit policy drop pkts",
-						"span":"6.0",
+						"name":"Policy hits(pkts)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
@@ -5526,10 +5586,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5545,7 +5605,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"fc97ae3"
+									"id":"4c689ba"
 								}
 							],
 							"thresholdShow":true,
@@ -5563,12 +5623,12 @@
 						},
 						"remark":"",
 						"x":"0.0",
-						"y":"6.0",
+						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_shape_rx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-RX",
+								"name":"RX",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5576,10 +5636,20 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_pkts{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_shape_tx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-TX",
+								"name":"TX",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-DROP",
+								"name":"DROP",
+								"orderNum":2,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -5589,11 +5659,11 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Hit policy drop bytes",
-						"span":"6.0",
+						"name":"Swarmkv/s (total)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"bytes/sec(SI)",
+						"unit":"packets/sec(IEC)",
 						"weight":62,
 						"param":{
 							"rightYAxis":{
@@ -5629,10 +5699,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5648,7 +5718,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"c460656"
+									"id":"4047bd92"
 								}
 							],
 							"thresholdShow":true,
@@ -5665,13 +5735,13 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"8.0",
+						"x":"9.0",
+						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_async{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Invoke",
+								"name":"Invoke",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5679,9 +5749,9 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_bytes{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_async_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Callback",
+								"name":"Callback",
 								"orderNum":1,
 								"id":"",
 								"state":1,
@@ -5692,8 +5762,8 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv async invoke)/s",
-						"span":"6.0",
+						"name":"Swarmkv/s (consume)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
@@ -5732,10 +5802,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5751,7 +5821,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"90d1b8"
+									"id":"4ca01d4a"
 								}
 							],
 							"thresholdShow":true,
@@ -5769,12 +5839,12 @@
 						},
 						"remark":"",
 						"x":"0.0",
-						"y":"10.0",
+						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_async{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_tconsume{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Invoke",
+								"name":"Invoke",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5782,10 +5852,20 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_async{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_tconsume_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Callback",
+								"name":"Callback",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_tconsume_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Failed",
+								"name":"Failed",
+								"orderNum":2,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -5795,8 +5875,8 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv async callback)/s",
-						"span":"6.0",
+						"name":"Swarmkv/s (hincrby)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
@@ -5835,10 +5915,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5854,7 +5934,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"bfc2b62"
+									"id":"c8a90f8"
 								}
 							],
 							"thresholdShow":true,
@@ -5871,13 +5951,13 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"12.0",
+						"x":"3.0",
+						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_async_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_hincrby{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Invoke",
+								"name":"Invoke",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5885,10 +5965,20 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_async_cb{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_hincrby_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Callback",
+								"name":"Callback",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_hincrby_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Failed",
+								"name":"Failed",
+								"orderNum":2,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -5898,8 +5988,8 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv comsume invoke)/s",
-						"span":"6.0",
+						"name":"Swarmkv/s (hmget)",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
@@ -5957,7 +6047,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"cae0b9"
+									"id":"37bb5bd"
 								}
 							],
 							"thresholdShow":true,
@@ -5974,13 +6064,13 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"14.0",
+						"x":"6.0",
+						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_tconsume{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
+								"expression":"sum(irate(shaping_global_hmget{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Invoke",
+								"name":"Invoke",
 								"orderNum":0,
 								"id":"",
 								"state":1,
@@ -5988,10 +6078,20 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_tconsume{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(irate(shaping_global_hmget_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Callback",
+								"name":"Callback",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_hmget_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-Failed",
+								"name":"Failed",
+								"orderNum":2,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -6001,20 +6101,14 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv comsume callback)/s",
-						"span":"6.0",
+						"name":"Swarmkv async latency",
+						"span":"3.0",
 						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"type":"Bar chart",
+						"unit":"us",
 						"weight":66,
 						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
+							"orientation":"vertical",
 							"color":{
 								"mode":"palette",
 								"paletteColors":[
@@ -6041,10 +6135,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -6052,37 +6146,28 @@
 								"placement":"bottom"
 							},
 							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
 							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"ca775e4"
-								}
-							],
-							"thresholdShow":true,
+							"displayMode":"basic",
+							"thresholds":[],
 							"enable":{
-								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
-								"tooltip":true,
 								"valueMapping":false
 							},
 							"valueMapping":[],
+							"text":"value",
 							"dataLink":[],
-							"nullType":"zero"
+							"nullType":"null",
+							"statistics":"last"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"16.0",
+						"x":"9.0",
+						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_tconsume_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.10\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
 								"name":"A",
 								"orderNum":0,
 								"id":"",
@@ -6091,10 +6176,50 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_tconsume_cb{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.50\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
 								"name":"B",
 								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.80\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
+								"name":"C",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.90\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
+								"name":"D",
+								"orderNum":3,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.95\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
+								"name":"E",
+								"orderNum":4,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(shaping_global_async_delay_us{quantile=\"0.99\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
+								"legend":"",
+								"name":"F",
+								"orderNum":5,
 								"id":"",
 								"state":1,
 								"type":"expert",
@@ -6104,11 +6229,11 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv hincrby invoke)/s",
-						"span":"6.0",
+						"name":"CPU",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"unit":"percent(0.0-1.0)",
 						"weight":67,
 						"param":{
 							"rightYAxis":{
@@ -6144,10 +6269,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -6162,8 +6287,8 @@
 							"link":"",
 							"thresholds":[
 								{
-									"color":"#d61b60",
-									"id":"5ad89bf4"
+									"color":"#a32043",
+									"id":"788429b"
 								}
 							],
 							"thresholdShow":true,
@@ -6181,10 +6306,10 @@
 						},
 						"remark":"",
 						"x":"0.0",
-						"y":"18.0",
+						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_hincrby{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"shaping\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -6194,7 +6319,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_hincrby{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"shaping\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -6207,11 +6332,11 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"(swarmkv hincrby callback)/s",
-						"span":"6.0",
+						"name":"Memory",
+						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"unit":"bytes(IEC)",
 						"weight":68,
 						"param":{
 							"rightYAxis":{
@@ -6247,315 +6372,6 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"774b35b"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"20.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_hincrby_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_hincrby_cb{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"(swarmkv hmget invoke)/s",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":69,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"55530789"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"22.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_hmget{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_hmget{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"(swarmkv hmget callback)/s",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":70,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"show",
-								"varName":"",
-								"varValue":"",
-								"operator":"equal"
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"fd431b0"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"24.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_hmget_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_hmget_cb{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"(swarmkv consume failed)/s",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":71,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
@@ -6574,8 +6390,8 @@
 							"link":"",
 							"thresholds":[
 								{
-									"color":"#d61b60",
-									"id":"99ff4e"
+									"color":"#a32043",
+									"id":"7f29c27"
 								}
 							],
 							"thresholdShow":true,
@@ -6592,11 +6408,11 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"26.0",
+						"x":"3.0",
+						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_tconsume_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(container_memory_rss{asset=\"{{asset.name}}\", container=\"shaping\"} ) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -6606,213 +6422,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_tconsume_failed{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"(swarmkv hincrby failed)/s",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":72,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"",
-								"varName":"",
-								"varValue":"",
-								"operator":""
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"fd14bc5"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"28.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_hincrby_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_hincrby_failed{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"(swarmkv hmget failed)/s",
-						"span":"6.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":73,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"",
-								"varName":"",
-								"varValue":"",
-								"operator":""
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#d61b60",
-									"id":"43ddad49"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"30.0",
-						"elements":[
-							{
-								"expression":"sum(irate(shaping_global_hmget_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(shaping_global_hmget_failed{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(container_memory_rss{asset=\"{{asset.name}}\", container=\"shaping\"} )",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -6832,7 +6442,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":74,
+				"weight":69,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -6881,7 +6491,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"13.06",
+				"y":"15.36",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -6891,7 +6501,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"percent(0.0-1.0)",
-						"weight":75,
+						"weight":70,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6994,7 +6604,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes(IEC)",
-						"weight":76,
+						"weight":71,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7097,7 +6707,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":77,
+						"weight":72,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7200,7 +6810,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":78,
+						"weight":73,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7303,7 +6913,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":79,
+						"weight":74,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7396,7 +7006,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":80,
+						"weight":75,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7499,7 +7109,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":81,
+						"weight":76,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7592,7 +7202,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":82,
+						"weight":77,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7685,7 +7295,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":83,
+						"weight":78,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7778,7 +7388,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":84,
+						"weight":79,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7881,7 +7491,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":85,
+						"weight":80,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7974,7 +7584,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":86,
+						"weight":81,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -8077,7 +7687,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":87,
+						"weight":82,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -8170,7 +7780,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":88,
+						"weight":83,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -8273,7 +7883,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":89,
+						"weight":84,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -8457,7 +8067,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.26",
+				"y":"1.25",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9172,7 +8782,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.53",
+				"y":"1.49",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9525,7 +9135,7 @@
 							"thresholds":[
 								{
 									"color":"#e5e23d",
-									"id":"24309958"
+									"id":"51045d0"
 								}
 							],
 							"thresholdShow":true,
@@ -9546,7 +9156,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(packet_io_dec_rx_B{component=\"proxy\"}[2m]) * 8)",
+								"expression":"sum(irate(packet_io_decrypt_rx_B{component=\"proxy\"}[2m]) * 8)",
 								"legend":"RX",
 								"name":"RX",
 								"orderNum":0,
@@ -9556,7 +9166,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(packet_io_dec_tx_B{component=\"proxy\"}[2m]) * 8)",
+								"expression":"sum(irate(packet_io_decrypt_tx_B{component=\"proxy\"}[2m]) * 8)",
 								"legend":"TX",
 								"name":"TX",
 								"orderNum":1,
@@ -9660,69 +9270,124 @@
 							}
 						],
 						"datasource":"metrics"
+					},
+					{
+						"name":"Trusted Certificate Authorities",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":13,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#e5e23d",
+									"id":"569f97b"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"2.0",
+						"elements":[
+							{
+								"expression":"max(tfe3a_trusted_cert_nums{component=\"proxy\"})",
+								"legend":"max",
+								"name":"max",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"min(tfe3a_trusted_cert_nums{component=\"proxy\"})",
+								"legend":"min",
+								"name":"min",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"stddev(tfe3a_trusted_cert_nums{component=\"proxy\"})",
+								"legend":"stddev",
+								"name":"stddev",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
 					}
 				]
 			},
 			{
 				"name":"Shaping",
-				"span":"12.0",
-				"height":"1.0",
-				"type":"Group",
-				"unit":"short",
-				"weight":13,
-				"param":{
-					"thresholds":[],
-					"visibility":{
-						"result":"show",
-						"varName":"",
-						"varValue":"",
-						"operator":"equal"
-					},
-					"color":{
-						"mode":"palette",
-						"paletteColors":[
-							"#3685FF",
-							"#00DCA2",
-							"#00BFD0",
-							"#954Eff",
-							"#FFCB01",
-							"#f65A96",
-							"#FF9094",
-							"#00CCF5",
-							"#FF8BEA",
-							"#4D7693",
-							"#72577C",
-							"#99D750",
-							"#DD8270",
-							"#C475EE",
-							"#7E83FB",
-							"#7EB090",
-							"#CF6684",
-							"#4E55FF",
-							"#FF8D00",
-							"#FF5200"
-						]
-					},
-					"enable":{
-						"visibility":false
-					},
-					"showHeader":1,
-					"repeat":{
-						"variable":""
-					},
-					"link":"",
-					"valueMapping":[],
-					"dataLink":[],
-					"collapse":true
-				},
-				"remark":"",
-				"x":"0.0",
-				"y":"1.79",
-				"elements":[],
-				"datasource":"misc"
-			},
-			{
-				"name":"Service Chaining",
 				"span":"12.0",
 				"height":"1.0",
 				"type":"Group",
@@ -9775,7 +9440,582 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"2.06",
+				"y":"1.74",
+				"elements":[],
+				"datasource":"misc",
+				"children":[
+					{
+						"name":"Session/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"packets/sec(IEC)",
+						"weight":15,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"ded3c69"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(rate(shaping_global_ctrl_active{component=\"shaping\"}[2m]))",
+								"legend":"Open",
+								"name":"Open",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(rate(shaping_global_ctrl_sf_close{component=\"shaping\"}[2m]))",
+								"legend":"Close",
+								"name":"Close",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Sessions (Concurrent)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":16,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"3f4e329"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"null"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(shaping_global_curr_session_num{component=\"shaping\"})",
+								"legend":"Concurrent",
+								"name":"Concurrent",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Policy hits(pkts)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"packets/sec(IEC)",
+						"weight":17,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"5fafd105"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"6.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(irate(shaping_global_shape_rx_pkts{component=\"shaping\"}[2m]))",
+								"legend":"RX",
+								"name":"RX",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_tx_pkts{component=\"shaping\"}[2m]))",
+								"legend":"TX",
+								"name":"TX",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_pkts{component=\"shaping\"}[2m]))",
+								"legend":"DROP",
+								"name":"DROP",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Policy hits(bytes)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"bytes/sec(SI)",
+						"weight":18,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"75576803"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"null"
+						},
+						"remark":"",
+						"x":"9.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m]))",
+								"legend":"RX",
+								"name":"RX",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_tx_bytes{component=\"shaping\"}[2m]))",
+								"legend":"TX",
+								"name":"TX",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_bytes{component=\"shaping\"}[2m]))",
+								"legend":"DROP",
+								"name":"DROP",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Queueing packets",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":31,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"ae2cf44"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"999.0",
+						"elements":[
+							{
+								"expression":"sum(shaping_global_curr_queueing_pkts{component=\"shaping\"})",
+								"legend":"Queueing packets",
+								"name":"A",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					}
+				]
+			},
+			{
+				"name":"Service Chaining",
+				"span":"12.0",
+				"height":"1.0",
+				"type":"Group",
+				"unit":"short",
+				"weight":19,
+				"param":{
+					"thresholds":[],
+					"visibility":{
+						"result":"show",
+						"varName":"",
+						"varValue":"",
+						"operator":"equal"
+					},
+					"color":{
+						"mode":"palette",
+						"paletteColors":[
+							"#3685FF",
+							"#00DCA2",
+							"#00BFD0",
+							"#954Eff",
+							"#FFCB01",
+							"#f65A96",
+							"#FF9094",
+							"#00CCF5",
+							"#FF8BEA",
+							"#4D7693",
+							"#72577C",
+							"#99D750",
+							"#DD8270",
+							"#C475EE",
+							"#7E83FB",
+							"#7EB090",
+							"#CF6684",
+							"#4E55FF",
+							"#FF8D00",
+							"#FF5200"
+						]
+					},
+					"enable":{
+						"visibility":false
+					},
+					"showHeader":1,
+					"repeat":{
+						"variable":""
+					},
+					"link":"",
+					"valueMapping":[],
+					"dataLink":[],
+					"collapse":true
+				},
+				"remark":"",
+				"x":"0.0",
+				"y":"3.98",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9785,7 +10025,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":15,
+						"weight":20,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9888,7 +10128,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":16,
+						"weight":21,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9991,7 +10231,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":17,
+						"weight":22,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10094,7 +10334,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":18,
+						"weight":23,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10187,7 +10427,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":19,
+						"weight":24,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10290,7 +10530,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":20,
+						"weight":25,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10393,7 +10633,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":21,
+						"weight":26,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10488,7 +10728,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":22,
+				"weight":27,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -10546,7 +10786,7 @@
 						"height":"2.0",
 						"type":"Area chart",
 						"unit":"bits/sec(SI)",
-						"weight":23,
+						"weight":28,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10646,7 +10886,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":24,
+						"weight":29,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10755,7 +10995,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":25,
+						"weight":30,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -11712,7 +11952,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.26",
+				"y":"1.25",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -12229,7 +12469,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.79",
+				"y":"5.74",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -12990,7 +13230,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.53",
+				"y":"5.49",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -13147,7 +13387,7 @@
 							"thresholds":[
 								{
 									"color":"#efed51",
-									"id":"48ddea1"
+									"id":"1f5766bd"
 								}
 							],
 							"thresholdShow":true,
@@ -13168,7 +13408,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(packet_io_dec_rx_B{component=\"proxy\"}[2m]) * 8) by (datacenter)",
+								"expression":"sum(irate(packet_io_decrypt_rx_B{component=\"proxy\"}[2m]) * 8) by (datacenter)",
 								"legend":"{{datacenter}}-RX",
 								"name":"RX",
 								"orderNum":0,
@@ -13178,7 +13418,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(packet_io_dec_tx_B{component=\"proxy\"}[2m]) * 8) by (datacenter)",
+								"expression":"sum(irate(packet_io_decrypt_tx_B{component=\"proxy\"}[2m]) * 8) by (datacenter)",
 								"legend":"{{datacenter}}-TX",
 								"name":"TX",
 								"orderNum":1,
@@ -13470,6 +13710,666 @@
 								"expression":"(sum(tfe3a_stm_open{component=\"proxy\"}) by (datacenter)) - (sum(tfe3a_stm_cls{component=\"proxy\"}) by (datacenter))",
 								"legend":"{{datacenter}}",
 								"name":"sessions",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Trusted Certificate Authorities",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":29,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#efed51",
+									"id":"1216445f"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"2.0",
+						"elements":[
+							{
+								"expression":"max(tfe3a_trusted_cert_nums{component=\"proxy\"}) by (datacenter)",
+								"legend":"{{datacenter}}-max",
+								"name":"max",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"min(tfe3a_trusted_cert_nums{component=\"proxy\"}) by (datacenter)",
+								"legend":"{{datacenter}}-min",
+								"name":"min",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"stddev(tfe3a_trusted_cert_nums{component=\"proxy\"}) by (datacenter)",
+								"legend":"{{datacenter}}-stddev",
+								"name":"stddev",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					}
+				]
+			},
+			{
+				"name":"Shaping",
+				"span":"12.0",
+				"height":"1.0",
+				"type":"Group",
+				"unit":"short",
+				"weight":30,
+				"param":{
+					"visibility":{
+						"result":"show",
+						"varName":"",
+						"varValue":"",
+						"operator":"equal"
+					},
+					"enable":{
+						"visibility":false,
+						"repeat":false
+					},
+					"showHeader":1,
+					"repeat":{
+						"variable":""
+					},
+					"collapse":true
+				},
+				"remark":"",
+				"x":"0.0",
+				"y":"9.98",
+				"elements":[],
+				"datasource":"misc",
+				"children":[
+					{
+						"name":"Session/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":31,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"299b5066"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(irate(shaping_global_ctrl_active{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-Open",
+								"name":"Open",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_ctrl_sf_close{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-Close",
+								"name":"Close",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Sessions (Concurrent)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":32,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"ec7866c"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"null"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(shaping_global_curr_session_num{component=\"shaping\"}) by (datacenter)",
+								"legend":"{{datacenter}}-sessions",
+								"name":"Concurrent",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Policy hits(pkts)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"packets/sec(IEC)",
+						"weight":33,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"77d1546"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"6.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(irate(shaping_global_shape_rx_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-RX",
+								"name":"RX",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_tx_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-TX",
+								"name":"TX",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-DROP",
+								"name":"DROP",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Policy hits(Bytes)",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"bytes/sec(SI)",
+						"weight":34,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"38e9856f"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"9.0",
+						"y":"0.0",
+						"elements":[
+							{
+								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-RX",
+								"name":"RX",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-TX",
+								"name":"TX",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(shaping_global_shape_drop_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-DROP",
+								"name":"DROP",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Queueing packets",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":35,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"show",
+								"varName":"",
+								"varValue":"",
+								"operator":"equal"
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a32043",
+									"id":"3e6843e"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"null"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"999.0",
+						"elements":[
+							{
+								"expression":"sum(shaping_global_curr_queueing_pkts{component=\"shaping\"}) by (datacenter)",
+								"legend":"{{datacenter}}-Queueing packets",
+								"name":"Queueing packets",
 								"orderNum":0,
 								"id":"",
 								"state":1,
