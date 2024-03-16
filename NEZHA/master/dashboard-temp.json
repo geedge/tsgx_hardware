@@ -2360,7 +2360,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"ae531ef"
+									"id":"6dde268"
 								}
 							],
 							"thresholdShow":true,
@@ -2381,7 +2381,7 @@
 						"y":"10.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Success",
 								"name":"A",
 								"orderNum":0,
@@ -2390,7 +2390,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Drop",
 								"name":"B",
 								"orderNum":1,
@@ -2399,7 +2399,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"SESSION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", ringbuff_produce=\"SESSION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -2838,7 +2838,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"91d5b16"
+									"id":"c56d837"
 								}
 							],
 							"thresholdShow":true,
@@ -2859,7 +2859,7 @@
 						"y":"10.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Success",
 								"name":"A",
 								"orderNum":0,
@@ -2869,7 +2869,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Drop",
 								"name":"B",
 								"orderNum":1,
@@ -2879,7 +2879,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", ringbuff_produce=\"TRANSACTION-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -2951,7 +2951,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"bf4fa2f"
+									"id":"2fd5204a"
 								}
 							],
 							"thresholdShow":true,
@@ -2972,7 +2972,7 @@
 						"y":"10.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)) + (sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Success",
 								"name":"A",
 								"orderNum":0,
@@ -2982,7 +2982,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)) + (sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Drop",
 								"name":"B",
 								"orderNum":1,
@@ -2992,7 +2992,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"VOIP-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", ringbuff_produce=\"VOIP-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -3064,7 +3064,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"13aad2a"
+									"id":"b4651f8"
 								}
 							],
 							"thresholdShow":true,
@@ -3085,7 +3085,7 @@
 						"y":"10.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)) + (sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Success",
 								"name":"A",
 								"orderNum":0,
@@ -3095,7 +3095,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)) + (sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(drop{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Drop",
 								"name":"B",
 								"orderNum":1,
@@ -3105,7 +3105,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum((sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", kafka_sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)) + (sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", ringbuff_produce=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))or vector(0)))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -8558,7 +8558,7 @@
 							"thresholds":[
 								{
 									"color":"#db1139",
-									"id":"59486a57"
+									"id":"4b72e9f"
 								}
 							],
 							"thresholdShow":true,
@@ -8578,7 +8578,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"(sum(irate(ok{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))or vector(0)) + (sum(irate(ok{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[2m] ))or vector(0))",
+								"expression":"sum(irate(ok{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))",
 								"legend":"Success",
 								"name":"A",
 								"orderNum":0,
@@ -8587,7 +8587,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(drop{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))or vector(0)) + (sum(irate(drop{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[2m] ))or vector(0))",
+								"expression":"sum(irate(drop{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))",
 								"legend":"Drop",
 								"name":"B",
 								"orderNum":1,
@@ -8596,7 +8596,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(error{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))or vector(0)) + (sum(irate(error{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[2m] ))or vector(0)) + (sum(irate(error{app_name=\"firewall\", component=\"firewall\", ringbuff_produce!=\"\"}[2m] ))or vector(0))",
+								"expression":"sum(irate(error{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[2m] ))",
 								"legend":"Failed",
 								"name":"C",
 								"orderNum":2,
@@ -12198,7 +12198,7 @@
 							"thresholds":[
 								{
 									"color":"#264cb5",
-									"id":"39812a72"
+									"id":"56501af"
 								}
 							],
 							"thresholdShow":true,
@@ -12218,7 +12218,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(error{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))or vector(0)) + (sum(irate(error{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[5m] ))or vector(0)) + (sum(irate(error{app_name=\"firewall\", component=\"firewall\", ringbuff_produce!=\"\"}[5m] ))or vector(0)))  by (datacenter)",
+								"expression":"sum(irate(error{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))  by (datacenter)",
 								"legend":"{{datacenter}}",
 								"name":"A",
 								"orderNum":0,
@@ -12289,7 +12289,7 @@
 							"thresholds":[
 								{
 									"color":"#264cb5",
-									"id":"6a138b61"
+									"id":"9650e01"
 								}
 							],
 							"thresholdShow":true,
@@ -12309,7 +12309,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(ok{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))or vector(0)) + (sum(irate(ok{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[5m] ))or vector(0)))  by (datacenter)",
+								"expression":"sum(irate(ok{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))  by (datacenter)",
 								"legend":"{{datacenter}}",
 								"name":"A",
 								"orderNum":0,
@@ -12381,7 +12381,7 @@
 							"thresholds":[
 								{
 									"color":"#264cb5",
-									"id":"71c421fc"
+									"id":"d4d9cd1"
 								}
 							],
 							"thresholdShow":true,
@@ -12401,7 +12401,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum((sum(irate(drop{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))or vector(0)) + (sum(irate(drop{app_name=\"firewall\", component=\"firewall\", kafka_sendlog!=\"\"}[5m] ))or vector(0)))  by (datacenter)",
+								"expression":"sum(irate(drop{app_name=\"firewall\", component=\"firewall\", sendlog!=\"\"}[5m] ))  by (datacenter)",
 								"legend":"{{datacenter}}",
 								"name":"A",
 								"orderNum":0,
