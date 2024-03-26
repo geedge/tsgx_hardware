@@ -1012,7 +1012,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.34",
+				"y":"4.26",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -1617,7 +1617,7 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"unit":"short",
 						"weight":20,
 						"param":{
 							"rightYAxis":{
@@ -1627,34 +1627,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#c97de8",
-									"id":"68b784e"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#c97de8",
+									"id":"1982517"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"zero"
 						},
 						"remark":"",
@@ -1665,13 +1696,19 @@
 								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -1681,7 +1718,7 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"unit":"short",
 						"weight":21,
 						"param":{
 							"rightYAxis":{
@@ -1691,34 +1728,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#b3a7ef",
-									"id":"34df95"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#b3a7ef",
+									"id":"5814f57"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"zero"
 						},
 						"remark":"",
@@ -1729,13 +1797,19 @@
 								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -3174,7 +3248,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.68",
+				"y":"4.53",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -3219,10 +3293,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -3238,7 +3312,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"915de47"
+									"id":"d2e6b8c"
 								}
 							],
 							"thresholdShow":true,
@@ -3260,7 +3334,7 @@
 						"elements":[
 							{
 								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"proxy\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-proxy",
 								"name":"A",
 								"orderNum":0,
 								"id":"",
@@ -3269,9 +3343,9 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"proxy\"}[2m]))",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"certstore\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-certstore",
+								"name":"C",
 								"orderNum":1,
 								"id":"",
 								"state":1,
@@ -3341,7 +3415,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"807a4ff"
+									"id":"36625028"
 								}
 							],
 							"thresholdShow":true,
@@ -3363,7 +3437,7 @@
 						"elements":[
 							{
 								"expression":"sum(container_memory_rss{asset=\"{{asset.name}}\", container=\"proxy\"}) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-proxy",
 								"name":"A",
 								"orderNum":0,
 								"id":"",
@@ -3372,9 +3446,9 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(container_memory_rss{asset=\"{{asset.name}}\", container=\"proxy\"})",
-								"legend":"sum",
-								"name":"B",
+								"expression":"sum(container_memory_rss{asset=\"{{asset.name}}\", container=\"certstore\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-certstore",
+								"name":"C",
 								"orderNum":1,
 								"id":"",
 								"state":1,
@@ -3461,7 +3535,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"9.0",
+						"x":"6.0",
 						"y":"4.0",
 						"elements":[
 							{
@@ -3488,7 +3562,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput - L7 Intercept",
+						"name":"Throughput (L7 Intercept)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -3528,10 +3602,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -3547,7 +3621,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"395c0632"
+									"id":"9e7cfd1"
 								}
 							],
 							"thresholdShow":true,
@@ -3564,12 +3638,12 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"6.0",
+						"x":"3.0",
 						"y":"4.0",
 						"elements":[
 							{
 								"expression":"sum(irate(tfe3a_stm_incpt_B{asset=\"{{asset.name}}\"}[2m]) * 8) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-intercept",
+								"legend":"{{serviceFunction}}",
 								"name":"intercept",
 								"orderNum":0,
 								"id":"",
@@ -3657,7 +3731,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"6.0",
+						"x":"3.0",
 						"y":"2.0",
 						"elements":[
 							{
@@ -3760,7 +3834,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"9.0",
+						"x":"6.0",
 						"y":"2.0",
 						"elements":[
 							{
@@ -3853,8 +3927,8 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"4.0",
+						"x":"9.0",
+						"y":"2.0",
 						"elements":[
 							{
 								"expression":"sum(irate(tfe3a_plain{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
@@ -3956,7 +4030,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"3.0",
+						"x":"0.0",
 						"y":"4.0",
 						"elements":[
 							{
@@ -4049,8 +4123,8 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"6.0",
+						"x":"9.0",
+						"y":"4.0",
 						"elements":[
 							{
 								"expression":"sum(irate(tfe3a_mirr_succ_B{asset=\"{{asset.name}}\"}[2m]) * 8) by (serviceFunction)",
@@ -4076,7 +4150,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Policy Hit (session/s)",
+						"name":"Policy Hits (session/s)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -4135,7 +4209,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"ae472a9"
+									"id":"e16235d"
 								}
 							],
 							"thresholdShow":true,
@@ -4157,7 +4231,7 @@
 						"elements":[
 							{
 								"expression":"sum(irate(packet_io_hit_incpt{asset=\"{{asset.name}}\"}[2m]))by (serviceFunction)",
-								"legend":"{{serviceFunction}}-hit intercept",
+								"legend":"{{serviceFunction}}-intercept",
 								"name":"Hit Intercept",
 								"orderNum":0,
 								"id":"",
@@ -4167,7 +4241,7 @@
 							},
 							{
 								"expression":"sum(irate(packet_io_hit_no_incpt{asset=\"{{asset.name}}\"}[2m]) )by (serviceFunction)",
-								"legend":"{{serviceFunction}}-hit no intercept",
+								"legend":"{{serviceFunction}}-no intercept",
 								"name":"Hit No Intercept",
 								"orderNum":1,
 								"id":"",
@@ -4179,7 +4253,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Policy Hit Intercept (session/s)",
+						"name":"Intercept Status (session/s)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -4238,7 +4312,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"5c9218eb"
+									"id":"264dcc1e"
 								}
 							],
 							"thresholdShow":true,
@@ -4255,115 +4329,12 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"9.0",
-						"y":"0.0",
-						"elements":[
-							{
-								"expression":"sum(irate(packet_io_can_incpt{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-can intercept",
-								"name":"Can Intercept",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(irate(packet_io_asymmetric{asset=\"{{asset.name}}\"}[2m]))by (serviceFunction)+sum(irate(packet_io_tunnel{asset=\"{{asset.name}}\"}[2m]))by (serviceFunction)+sum(irate(packet_io_tcp_pcy_inval{asset=\"{{asset.name}}\"}[2m]))by (serviceFunction)",
-								"legend":"{{serviceFunction}}-can't intercept",
-								"name":"Can't Intercept",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Can Intercept (session/s)",
-						"span":"3.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"short",
-						"weight":49,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"",
-								"varName":"",
-								"varValue":"",
-								"operator":""
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#a943e0",
-									"id":"9e4511b"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"3.0",
+						"x":"0.0",
 						"y":"2.0",
 						"elements":[
 							{
 								"expression":"sum(irate(tfe3a_stm_incpt{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-intercept succ",
+								"legend":"{{serviceFunction}}-succ",
 								"name":"intercept succ",
 								"orderNum":0,
 								"id":"",
@@ -4373,7 +4344,7 @@
 							},
 							{
 								"expression":"sum(irate(tfe3a_stm_byp{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-intercept bypass",
+								"legend":"{{serviceFunction}}-bypass",
 								"name":"intercept bypass",
 								"orderNum":1,
 								"id":"",
@@ -4383,7 +4354,7 @@
 							},
 							{
 								"expression":"sum(irate(tfe3a_stm_open{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction) - sum(irate(tfe3a_stm_incpt{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction) - sum(irate(tfe3a_stm_byp{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-intercept failed",
+								"legend":"{{serviceFunction}}-failed",
 								"name":"intercept failed",
 								"orderNum":2,
 								"id":"",
@@ -4400,7 +4371,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":50,
+						"weight":49,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -4471,8 +4442,8 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"0.0",
-						"y":"2.0",
+						"x":"9.0",
+						"y":"0.0",
 						"elements":[
 							{
 								"expression":"sum(irate(packet_io_asymmetric{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
@@ -4513,7 +4484,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":51,
+						"weight":50,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -4584,7 +4555,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"3.0",
+						"x":"0.0",
 						"y":"6.0",
 						"elements":[
 							{
@@ -4606,7 +4577,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":52,
+						"weight":51,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -4677,7 +4648,7 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"6.0",
+						"x":"3.0",
 						"y":"6.0",
 						"elements":[
 							{
@@ -4694,7 +4665,100 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Log Num/s",
+						"name":"Manipulation Logs/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":52,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"1d395f9f"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"9.0",
+						"y":"6.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_log_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}",
+								"name":"sum",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Manipulation Policy Hits/s",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -4753,7 +4817,7 @@
 							"thresholds":[
 								{
 									"color":"#a943e0",
-									"id":"017a327"
+									"id":"4eec6e18"
 								}
 							],
 							"thresholdShow":true,
@@ -4770,101 +4834,8 @@
 							"nullType":"zero"
 						},
 						"remark":"",
-						"x":"9.0",
+						"x":"6.0",
 						"y":"6.0",
-						"elements":[
-							{
-								"expression":"sum(irate(tfe3a_log_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-sum",
-								"name":"sum",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					},
-					{
-						"name":"Policy Manipulation/s",
-						"span":"3.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"short",
-						"weight":54,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"",
-								"varName":"",
-								"varValue":"",
-								"operator":""
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
-									"color":"#a943e0",
-									"id":"02ea2d2"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"0.0",
-						"y":"8.0",
 						"elements":[
 							{
 								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
@@ -4958,13 +4929,74 @@
 							}
 						],
 						"datasource":"metrics"
+					}
+				]
+			},
+			{
+				"name":"Shaping",
+				"span":"12.0",
+				"height":"1.0",
+				"type":"Group",
+				"unit":"short",
+				"weight":54,
+				"param":{
+					"thresholds":[],
+					"visibility":{
+						"result":"show",
+						"varName":"",
+						"varValue":"",
+						"operator":"equal"
 					},
+					"color":{
+						"mode":"palette",
+						"paletteColors":[
+							"#3685FF",
+							"#00DCA2",
+							"#00BFD0",
+							"#954Eff",
+							"#FFCB01",
+							"#f65A96",
+							"#FF9094",
+							"#00CCF5",
+							"#FF8BEA",
+							"#4D7693",
+							"#72577C",
+							"#99D750",
+							"#DD8270",
+							"#C475EE",
+							"#7E83FB",
+							"#7EB090",
+							"#CF6684",
+							"#4E55FF",
+							"#FF8D00",
+							"#FF5200"
+						]
+					},
+					"enable":{
+						"visibility":false,
+						"repeat":false
+					},
+					"showHeader":1,
+					"repeat":{
+						"variable":""
+					},
+					"link":"",
+					"valueMapping":[],
+					"dataLink":[],
+					"collapse":true
+				},
+				"remark":"",
+				"x":"0.0",
+				"y":"13.06",
+				"elements":[],
+				"datasource":"misc",
+				"children":[
 					{
-						"name":"CertStore CPU",
+						"name":"Session/s",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"percent(0.0-1.0)",
+						"unit":"short",
 						"weight":55,
 						"param":{
 							"rightYAxis":{
@@ -5018,172 +5050,8 @@
 							"link":"",
 							"thresholds":[
 								{
-									"color":"#a943e0",
-									"id":"fa0eeb9"
-								}
-							],
-							"thresholdShow":true,
-							"enable":{
-								"rightYAxis":false,
-								"thresholds":false,
-								"visibility":false,
-								"legend":true,
-								"tooltip":true,
-								"valueMapping":false
-							},
-							"valueMapping":[],
-							"dataLink":[],
-							"nullType":"zero"
-						},
-						"remark":"",
-						"x":"3.0",
-						"y":"8.0",
-						"elements":[
-							{
-								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"certstore\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}",
-								"name":"A",
-								"orderNum":0,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							},
-							{
-								"expression":"sum(rate(container_cpu_usage_seconds_total{asset=\"{{asset.name}}\", container=\"certstore\"}[2m]))",
-								"legend":"sum",
-								"name":"B",
-								"orderNum":1,
-								"id":"",
-								"state":1,
-								"type":"expert",
-								"queryType":1
-							}
-						],
-						"datasource":"metrics"
-					}
-				]
-			},
-			{
-				"name":"Shaping",
-				"span":"12.0",
-				"height":"1.0",
-				"type":"Group",
-				"unit":"short",
-				"weight":56,
-				"param":{
-					"thresholds":[],
-					"visibility":{
-						"result":"show",
-						"varName":"",
-						"varValue":"",
-						"operator":"equal"
-					},
-					"color":{
-						"mode":"palette",
-						"paletteColors":[
-							"#3685FF",
-							"#00DCA2",
-							"#00BFD0",
-							"#954Eff",
-							"#FFCB01",
-							"#f65A96",
-							"#FF9094",
-							"#00CCF5",
-							"#FF8BEA",
-							"#4D7693",
-							"#72577C",
-							"#99D750",
-							"#DD8270",
-							"#C475EE",
-							"#7E83FB",
-							"#7EB090",
-							"#CF6684",
-							"#4E55FF",
-							"#FF8D00",
-							"#FF5200"
-						]
-					},
-					"enable":{
-						"visibility":false,
-						"repeat":false
-					},
-					"showHeader":1,
-					"repeat":{
-						"variable":""
-					},
-					"link":"",
-					"valueMapping":[],
-					"dataLink":[],
-					"collapse":true
-				},
-				"remark":"",
-				"x":"0.0",
-				"y":"15.02",
-				"elements":[],
-				"datasource":"misc",
-				"children":[
-					{
-						"name":"Session/s",
-						"span":"3.0",
-						"height":"2.0",
-						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":57,
-						"param":{
-							"rightYAxis":{
-								"elementNames":[],
-								"unit":2,
-								"style":"line",
-								"label":""
-							},
-							"stack":0,
-							"color":{
-								"mode":"palette",
-								"paletteColors":[
-									"#3685FF",
-									"#00DCA2",
-									"#00BFD0",
-									"#954Eff",
-									"#FFCB01",
-									"#f65A96",
-									"#FF9094",
-									"#00CCF5",
-									"#FF8BEA",
-									"#4D7693",
-									"#72577C",
-									"#99D750",
-									"#DD8270",
-									"#C475EE",
-									"#7E83FB",
-									"#7EB090",
-									"#CF6684",
-									"#4E55FF",
-									"#FF8D00",
-									"#FF5200"
-								]
-							},
-							"visibility":{
-								"result":"",
-								"varName":"",
-								"varValue":"",
-								"operator":""
-							},
-							"legend":{
-								"values":[],
-								"show":true,
-								"placement":"bottom"
-							},
-							"showHeader":1,
-							"tooltip":{
-								"mode":"all",
-								"sort":"none"
-							},
-							"link":"",
-							"thresholds":[
-								{
 									"color":"#d61b60",
-									"id":"67b45fde"
+									"id":"130120db"
 								}
 							],
 							"thresholdShow":true,
@@ -5232,7 +5100,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":58,
+						"weight":56,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5334,8 +5202,8 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"short",
-						"weight":59,
+						"unit":"packets/sec(IEC)",
+						"weight":57,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5370,10 +5238,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -5389,7 +5257,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"724a0e9e"
+									"id":"5dfb332a"
 								}
 							],
 							"thresholdShow":true,
@@ -5438,7 +5306,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes/sec(SI)",
-						"weight":60,
+						"weight":58,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5551,7 +5419,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":61,
+						"weight":59,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5663,8 +5531,8 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":62,
+						"unit":"short",
+						"weight":60,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5718,7 +5586,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"4047bd92"
+									"id":"7e569857"
 								}
 							],
 							"thresholdShow":true,
@@ -5766,8 +5634,8 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":63,
+						"unit":"short",
+						"weight":61,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5821,7 +5689,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"4ca01d4a"
+									"id":"73726b6"
 								}
 							],
 							"thresholdShow":true,
@@ -5879,8 +5747,8 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":64,
+						"unit":"short",
+						"weight":62,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5934,7 +5802,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"c8a90f8"
+									"id":"4cc0820"
 								}
 							],
 							"thresholdShow":true,
@@ -5992,8 +5860,8 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
-						"weight":65,
+						"unit":"short",
+						"weight":63,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6047,7 +5915,7 @@
 							"thresholds":[
 								{
 									"color":"#d61b60",
-									"id":"37bb5bd"
+									"id":"355801af"
 								}
 							],
 							"thresholdShow":true,
@@ -6106,7 +5974,7 @@
 						"height":"2.0",
 						"type":"Bar chart",
 						"unit":"us",
-						"weight":66,
+						"weight":64,
 						"param":{
 							"orientation":"vertical",
 							"color":{
@@ -6234,7 +6102,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"percent(0.0-1.0)",
-						"weight":67,
+						"weight":65,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6337,7 +6205,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes(IEC)",
-						"weight":68,
+						"weight":66,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6442,7 +6310,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":69,
+				"weight":67,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -6491,7 +6359,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"15.36",
+				"y":"12.79",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -6501,7 +6369,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"percent(0.0-1.0)",
-						"weight":70,
+						"weight":68,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6604,7 +6472,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes(IEC)",
-						"weight":71,
+						"weight":69,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6707,7 +6575,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":72,
+						"weight":70,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6805,12 +6673,12 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput - VXLAN",
+						"name":"Throughput (VXLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":73,
+						"weight":71,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6864,7 +6732,7 @@
 							"thresholds":[
 								{
 									"color":"#45e222",
-									"id":"a94ad7"
+									"id":"62ce04e7"
 								}
 							],
 							"thresholdShow":true,
@@ -6908,12 +6776,12 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Failure Action: bypass",
+						"name":"Failure Action (Bypass)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":74,
+						"weight":72,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6967,7 +6835,7 @@
 							"thresholds":[
 								{
 									"color":"#45e222",
-									"id":"b034ec1"
+									"id":"b6f26a3"
 								}
 							],
 							"thresholdShow":true,
@@ -7006,7 +6874,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":75,
+						"weight":73,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7109,7 +6977,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":76,
+						"weight":74,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7202,7 +7070,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":77,
+						"weight":75,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7295,7 +7163,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":78,
+						"weight":76,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7388,7 +7256,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":79,
+						"weight":77,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7491,7 +7359,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":80,
+						"weight":78,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7579,12 +7447,12 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput - VLAN",
+						"name":"Throughput (VLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":81,
+						"weight":79,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7638,7 +7506,7 @@
 							"thresholds":[
 								{
 									"color":"#45e222",
-									"id":"d6ae9e6"
+									"id":"16dd0f8"
 								}
 							],
 							"thresholdShow":true,
@@ -7682,12 +7550,12 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Failure Action: block",
+						"name":"Failure Action (Block)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":82,
+						"weight":80,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7741,7 +7609,7 @@
 							"thresholds":[
 								{
 									"color":"#45e222",
-									"id":"65e821a7"
+									"id":"6d45ee98"
 								}
 							],
 							"thresholdShow":true,
@@ -7780,7 +7648,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":83,
+						"weight":81,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7883,7 +7751,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":84,
+						"weight":82,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -8787,7 +8655,7 @@
 				"datasource":"misc",
 				"children":[
 					{
-						"name":"Throughput - L7 Intercept",
+						"name":"Throughput (L7 Intercept)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -8846,7 +8714,7 @@
 							"thresholds":[
 								{
 									"color":"#e5e23d",
-									"id":"7b9fbc6e"
+									"id":"13eac0e"
 								}
 							],
 							"thresholdShow":true,
@@ -9449,7 +9317,7 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"packets/sec(IEC)",
+						"unit":"short",
 						"weight":15,
 						"param":{
 							"rightYAxis":{
@@ -9504,7 +9372,7 @@
 							"thresholds":[
 								{
 									"color":"#a32043",
-									"id":"ded3c69"
+									"id":"66798358"
 								}
 							],
 							"thresholdShow":true,
@@ -9871,7 +9739,7 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"short",
+						"unit":"packets/sec(IEC)",
 						"weight":31,
 						"param":{
 							"rightYAxis":{
@@ -9907,10 +9775,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -9926,7 +9794,7 @@
 							"thresholds":[
 								{
 									"color":"#a32043",
-									"id":"ae2cf44"
+									"id":"3e67c5f6"
 								}
 							],
 							"thresholdShow":true,
@@ -10123,7 +9991,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput -VLAN",
+						"name":"Throughput (VLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -10182,7 +10050,7 @@
 							"thresholds":[
 								{
 									"color":"#f4af2e",
-									"id":"3deb0fd"
+									"id":"5706bda"
 								}
 							],
 							"thresholdShow":true,
@@ -10226,7 +10094,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput -VXLAN",
+						"name":"Throughput (VXLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -10285,7 +10153,7 @@
 							"thresholds":[
 								{
 									"color":"#f4af2e",
-									"id":"49005e2"
+									"id":"aac4796"
 								}
 							],
 							"thresholdShow":true,
@@ -12577,7 +12445,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput - VLAN",
+						"name":"Throughput (VLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -12636,7 +12504,7 @@
 							"thresholds":[
 								{
 									"color":"#ea52e0",
-									"id":"3e734ad0"
+									"id":"f74ee86"
 								}
 							],
 							"thresholdShow":true,
@@ -12680,7 +12548,7 @@
 						"datasource":"metrics"
 					},
 					{
-						"name":"Throughput - VXLAN",
+						"name":"Throughput (VXLAN)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -12739,7 +12607,7 @@
 							"thresholds":[
 								{
 									"color":"#ea52e0",
-									"id":"4da60c4"
+									"id":"5a19806"
 								}
 							],
 							"thresholdShow":true,
@@ -13235,7 +13103,7 @@
 				"datasource":"misc",
 				"children":[
 					{
-						"name":"Throughput - L7 Intercept",
+						"name":"Throughput (L7 Intercept)",
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
@@ -13294,7 +13162,7 @@
 							"thresholds":[
 								{
 									"color":"#efed51",
-									"id":"2c16c088"
+									"id":"93952bf"
 								}
 							],
 							"thresholdShow":true,
@@ -14291,7 +14159,7 @@
 						"span":"3.0",
 						"height":"2.0",
 						"type":"Line chart",
-						"unit":"short",
+						"unit":"packets/sec(IEC)",
 						"weight":35,
 						"param":{
 							"rightYAxis":{
@@ -14327,10 +14195,10 @@
 								]
 							},
 							"visibility":{
-								"result":"show",
+								"result":"",
 								"varName":"",
 								"varValue":"",
-								"operator":"equal"
+								"operator":""
 							},
 							"legend":{
 								"values":[],
@@ -14346,7 +14214,7 @@
 							"thresholds":[
 								{
 									"color":"#a32043",
-									"id":"3e6843e"
+									"id":"374bc2b8"
 								}
 							],
 							"thresholdShow":true,
