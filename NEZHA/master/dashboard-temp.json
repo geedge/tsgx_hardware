@@ -1012,7 +1012,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.26",
+				"y":"4.34",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -3248,7 +3248,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"4.53",
+				"y":"16.68",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -4929,6 +4929,222 @@
 							}
 						],
 						"datasource":"metrics"
+					},
+					{
+						"name":"CertStore Request Num/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":54,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"d6f6193"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"0.0",
+						"y":"8.0",
+						"elements":[
+							{
+								"expression":"sum(irate(certstore_ask_kyr_req{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-req",
+								"name":"req",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(certstore_rd_cache{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-cache",
+								"name":"cache",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(certstore_x509_sign{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-new",
+								"name":"new",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
+					},
+					{
+						"name":"Keyring Request Num/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":55,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#a943e0",
+									"id":"5af37d0"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"3.0",
+						"y":"8.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_kyr_ask{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-req",
+								"name":"req",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(kyr_new{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-new",
+								"name":"new",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
 					}
 				]
 			},
@@ -4938,7 +5154,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":54,
+				"weight":56,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -4987,7 +5203,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"13.06",
+				"y":"27.36",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -4997,7 +5213,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":55,
+						"weight":57,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5100,7 +5316,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":56,
+						"weight":58,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5203,7 +5419,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":57,
+						"weight":59,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5306,7 +5522,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes/sec(SI)",
-						"weight":58,
+						"weight":60,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5419,7 +5635,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":59,
+						"weight":61,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5532,7 +5748,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":60,
+						"weight":62,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5635,7 +5851,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":61,
+						"weight":63,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5748,7 +5964,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":62,
+						"weight":64,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5861,7 +6077,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":63,
+						"weight":65,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -5974,7 +6190,7 @@
 						"height":"2.0",
 						"type":"Bar chart",
 						"unit":"us",
-						"weight":64,
+						"weight":66,
 						"param":{
 							"orientation":"vertical",
 							"color":{
@@ -6102,7 +6318,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"percent(0.0-1.0)",
-						"weight":65,
+						"weight":67,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6205,7 +6421,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes(IEC)",
-						"weight":66,
+						"weight":68,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6310,7 +6526,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":67,
+				"weight":69,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -6359,7 +6575,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"12.79",
+				"y":"27.02",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -6369,7 +6585,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"percent(0.0-1.0)",
-						"weight":68,
+						"weight":70,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6472,7 +6688,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes(IEC)",
-						"weight":69,
+						"weight":71,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6575,7 +6791,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":70,
+						"weight":72,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6678,7 +6894,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":71,
+						"weight":73,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6781,7 +6997,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":72,
+						"weight":74,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6874,7 +7090,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":73,
+						"weight":75,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -6977,7 +7193,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":74,
+						"weight":76,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7070,7 +7286,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":75,
+						"weight":77,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7163,7 +7379,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":76,
+						"weight":78,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7256,7 +7472,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":77,
+						"weight":79,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7359,7 +7575,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":78,
+						"weight":80,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7452,7 +7668,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":79,
+						"weight":81,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7555,7 +7771,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":80,
+						"weight":82,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7648,7 +7864,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":81,
+						"weight":83,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7751,7 +7967,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":82,
+						"weight":84,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -7935,7 +8151,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.25",
+				"y":"3.34",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -8650,7 +8866,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.49",
+				"y":"7.68",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9251,6 +9467,179 @@
 							}
 						],
 						"datasource":"metrics"
+					},
+					{
+						"name":"Manipulation Policy Hits/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":14,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#e5e23d",
+									"id":"578ab678"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"6.0",
+						"y":"2.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-monitor",
+								"name":"monitor",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_deny_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-deny",
+								"name":"deny",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rdirt_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-redirect",
+								"name":" redirect",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_repl_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-replace",
+								"name":" replace",
+								"orderNum":3,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_hijk_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-hijack",
+								"name":"hijack",
+								"orderNum":4,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_ins_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-insert",
+								"name":"insert",
+								"orderNum":5,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_allow_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-allow",
+								"name":"allow",
+								"orderNum":6,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-edit element",
+								"name":"edit element",
+								"orderNum":7,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rus_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-run script",
+								"name":"run script",
+								"orderNum":8,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
 					}
 				]
 			},
@@ -9260,7 +9649,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":14,
+				"weight":15,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -9308,7 +9697,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.74",
+				"y":"12.02",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9318,7 +9707,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":15,
+						"weight":16,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9421,7 +9810,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":16,
+						"weight":17,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9514,7 +9903,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":17,
+						"weight":18,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9627,7 +10016,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes/sec(SI)",
-						"weight":18,
+						"weight":19,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9740,7 +10129,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":31,
+						"weight":20,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9812,7 +10201,7 @@
 						},
 						"remark":"",
 						"x":"0.0",
-						"y":"999.0",
+						"y":"2.0",
 						"elements":[
 							{
 								"expression":"sum(shaping_global_curr_queueing_pkts{component=\"shaping\"})",
@@ -9835,7 +10224,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":19,
+				"weight":21,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -9883,7 +10272,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"3.98",
+				"y":"16.36",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -9893,7 +10282,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":20,
+						"weight":22,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -9996,7 +10385,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":21,
+						"weight":23,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10099,7 +10488,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":22,
+						"weight":24,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10202,7 +10591,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":23,
+						"weight":25,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10295,7 +10684,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":24,
+						"weight":26,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10398,7 +10787,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":25,
+						"weight":27,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10501,7 +10890,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":26,
+						"weight":28,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10596,7 +10985,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":27,
+				"weight":29,
 				"param":{
 					"thresholds":[],
 					"visibility":{
@@ -10654,7 +11043,7 @@
 						"height":"2.0",
 						"type":"Area chart",
 						"unit":"bits/sec(SI)",
-						"weight":28,
+						"weight":30,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10754,7 +11143,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":29,
+						"weight":31,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -10863,7 +11252,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bits/sec(SI)",
-						"weight":30,
+						"weight":32,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -11820,7 +12209,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"1.25",
+				"y":"5.34",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -12337,7 +12726,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"5.74",
+				"y":"14.02",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -13098,7 +13487,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"5.49",
+				"y":"9.68",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -13699,6 +14088,179 @@
 							}
 						],
 						"datasource":"metrics"
+					},
+					{
+						"name":"Manipulation Policy Hits/s",
+						"span":"3.0",
+						"height":"2.0",
+						"type":"Line chart",
+						"unit":"short",
+						"weight":30,
+						"param":{
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
+							"visibility":{
+								"result":"",
+								"varName":"",
+								"varValue":"",
+								"operator":""
+							},
+							"legend":{
+								"values":[],
+								"show":true,
+								"placement":"bottom"
+							},
+							"showHeader":1,
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"link":"",
+							"thresholds":[
+								{
+									"color":"#efed51",
+									"id":"e56d196"
+								}
+							],
+							"thresholdShow":true,
+							"enable":{
+								"rightYAxis":false,
+								"thresholds":false,
+								"visibility":false,
+								"legend":true,
+								"tooltip":true,
+								"valueMapping":false
+							},
+							"valueMapping":[],
+							"dataLink":[],
+							"nullType":"zero"
+						},
+						"remark":"",
+						"x":"6.0",
+						"y":"2.0",
+						"elements":[
+							{
+								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-monitor",
+								"name":"monitor",
+								"orderNum":0,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_deny_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-deny",
+								"name":"deny",
+								"orderNum":1,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rdirt_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-redirect",
+								"name":" redirect",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_repl_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-replace",
+								"name":"replace",
+								"orderNum":3,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_hijk_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-hijack",
+								"name":"hijack",
+								"orderNum":4,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_ins_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-insert",
+								"name":"insert",
+								"orderNum":5,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_allow_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-allow",
+								"name":"allow",
+								"orderNum":6,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-edit element",
+								"name":"edit element",
+								"orderNum":7,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(tfe3a_intcp_rus_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-run script",
+								"name":"run script",
+								"orderNum":8,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							}
+						],
+						"datasource":"metrics"
 					}
 				]
 			},
@@ -13708,7 +14270,7 @@
 				"height":"1.0",
 				"type":"Group",
 				"unit":"short",
-				"weight":30,
+				"weight":31,
 				"param":{
 					"visibility":{
 						"result":"show",
@@ -13728,7 +14290,7 @@
 				},
 				"remark":"",
 				"x":"0.0",
-				"y":"9.98",
+				"y":"14.36",
 				"elements":[],
 				"datasource":"misc",
 				"children":[
@@ -13738,7 +14300,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":31,
+						"weight":32,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -13841,7 +14403,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"short",
-						"weight":32,
+						"weight":33,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -13934,7 +14496,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":33,
+						"weight":34,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -14047,7 +14609,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"bytes/sec(SI)",
-						"weight":34,
+						"weight":35,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
@@ -14160,7 +14722,7 @@
 						"height":"2.0",
 						"type":"Line chart",
 						"unit":"packets/sec(IEC)",
-						"weight":35,
+						"weight":36,
 						"param":{
 							"rightYAxis":{
 								"elementNames":[],
