@@ -1563,34 +1563,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#49f468",
-									"id":"4b06eea"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#49f468",
+									"id":"232a6175"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"null"
 						},
 						"remark":"",
@@ -1599,15 +1630,21 @@
 						"elements":[
 							{
 								"expression":"sum(sapp4_Tcp_Concurrent{asset=\"{{asset.name}}\"}) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(sapp4_Tcp_Concurrent{asset=\"{{asset.name}}\"})",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -1672,7 +1709,7 @@
 							"thresholds":[
 								{
 									"color":"#c97de8",
-									"id":"1982517"
+									"id":"4c9a48f6"
 								}
 							],
 							"thresholdShow":true,
@@ -1694,7 +1731,7 @@
 						"elements":[
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
 								"state":1,
@@ -1703,9 +1740,29 @@
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(sapp4_Udp_Link_New{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-UDP",
+								"name":"C",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(sapp4_Udp_Link_New{asset=\"{{asset.name}}\"}[5m]))",
+								"legend":"sum-UDP",
+								"name":"D",
+								"orderNum":3,
+								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
@@ -1773,7 +1830,7 @@
 							"thresholds":[
 								{
 									"color":"#b3a7ef",
-									"id":"5814f57"
+									"id":"e926e24"
 								}
 							],
 							"thresholdShow":true,
@@ -1795,7 +1852,7 @@
 						"elements":[
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
 								"state":1,
@@ -1804,9 +1861,29 @@
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(sapp4_Udp_Link_Del{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"legend":"{{serviceFunction}}-UDP",
+								"name":"C",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(irate(sapp4_Udp_Link_Del{asset=\"{{asset.name}}\"}[5m]))",
+								"legend":"sum-UDP",
+								"name":"D",
+								"orderNum":3,
+								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
@@ -1829,34 +1906,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#8643a8",
-									"id":"7a01f74b"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#8643a8",
+									"id":"61cc7f"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"zero"
 						},
 						"remark":"",
@@ -1865,15 +1973,21 @@
 						"elements":[
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_Double{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_Double{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -1893,34 +2007,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#8643a8",
-									"id":"190832be"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#8643a8",
+									"id":"72058054"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"zero"
 						},
 						"remark":"",
@@ -1929,15 +2074,21 @@
 						"elements":[
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_C2S{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_C2S{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -1957,34 +2108,65 @@
 								"label":""
 							},
 							"stack":0,
-							"thresholds":[
-								{
-									"color":"#8643a8",
-									"id":"ae9f0c8"
-								}
-							],
-							"thresholdShow":true,
 							"visibility":{
 								"result":"",
 								"varName":"",
 								"varValue":"",
 								"operator":""
 							},
+							"color":{
+								"mode":"palette",
+								"paletteColors":[
+									"#3685FF",
+									"#00DCA2",
+									"#00BFD0",
+									"#954Eff",
+									"#FFCB01",
+									"#f65A96",
+									"#FF9094",
+									"#00CCF5",
+									"#FF8BEA",
+									"#4D7693",
+									"#72577C",
+									"#99D750",
+									"#DD8270",
+									"#C475EE",
+									"#7E83FB",
+									"#7EB090",
+									"#CF6684",
+									"#4E55FF",
+									"#FF8D00",
+									"#FF5200"
+								]
+							},
 							"legend":{
 								"values":[],
 								"show":true,
 								"placement":"bottom"
 							},
+							"showHeader":1,
+							"link":"",
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#8643a8",
+									"id":"5a5aefc5"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
 								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
-							"showHeader":1,
-							"link":"",
 							"valueMapping":[],
+							"dataLink":[],
 							"nullType":"zero"
 						},
 						"remark":"",
@@ -1993,15 +2175,21 @@
 						"elements":[
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_S2C{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
-								"legend":"{{serviceFunction}}",
+								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
-								"state":1
+								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							},
 							{
 								"expression":"sum(irate(sapp4_Tcp_Link_S2C{asset=\"{{asset.name}}\"}[5m]))",
-								"legend":"sum",
+								"legend":"sum-TCP",
 								"name":"B",
-								"state":1
+								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
 							}
 						],
 						"datasource":"metrics"
@@ -8215,7 +8403,7 @@
 							"thresholds":[
 								{
 									"color":"#ef20f9",
-									"id":"cdbb712"
+									"id":"4cd0a968"
 								}
 							],
 							"thresholdShow":true,
@@ -8236,7 +8424,7 @@
 						"elements":[
 							{
 								"expression":"sum(rate(sapp4_Tcp_Link_New{component=\"firewall\"}[2m]))",
-								"legend":"Open",
+								"legend":"Open-TCP",
 								"name":"A",
 								"orderNum":0,
 								"state":1,
@@ -8245,9 +8433,29 @@
 							},
 							{
 								"expression":"sum(rate(sapp4_Tcp_Link_Del{component=\"firewall\"}[2m]))",
-								"legend":"Close",
+								"legend":"Close-TCP",
 								"name":"B",
 								"orderNum":1,
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(rate(sapp4_Udp_Link_New{component=\"firewall\"}[2m]))",
+								"legend":"Open-UDP",
+								"name":"C",
+								"orderNum":2,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(rate(sapp4_Udp_Link_Del{component=\"firewall\"}[2m]))",
+								"legend":"Close-UDP",
+								"name":"D",
+								"orderNum":3,
+								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
@@ -8315,7 +8523,7 @@
 							"thresholds":[
 								{
 									"color":"#ca46f2",
-									"id":"7611938f"
+									"id":"0aece6"
 								}
 							],
 							"thresholdShow":true,
@@ -8336,9 +8544,19 @@
 						"elements":[
 							{
 								"expression":"sum(sapp4_Tcp_Concurrent{component=\"firewall\"})",
-								"legend":"Concurrent",
+								"legend":"Concurrent-TCP",
 								"name":"A",
 								"orderNum":0,
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"sum(sapp4_Udp_Concurrent{component=\"firewall\"})",
+								"legend":"Concurrent-UDP",
+								"name":"B",
+								"orderNum":1,
+								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
@@ -8406,7 +8624,7 @@
 							"thresholds":[
 								{
 									"color":"#c90a20",
-									"id":"499be11"
+									"id":"bed36ef"
 								}
 							],
 							"thresholdShow":true,
@@ -8426,8 +8644,8 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m]))+sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
-								"legend":"Only C=>S",
+								"expression":"(sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m]))) /(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"Only C=>S-TCP",
 								"name":"A",
 								"orderNum":0,
 								"state":1,
@@ -8435,8 +8653,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m]))+sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
-								"legend":"Only S=>C",
+								"expression":"(sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"Only S=>C-TCP",
 								"name":"B",
 								"orderNum":1,
 								"state":1,
@@ -8444,10 +8662,40 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m]))+sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
-								"legend":"C<=>S",
+								"expression":"(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) )/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"C<=>S-TCP",
 								"name":"C",
 								"orderNum":2,
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"Only C=>S-UDP",
+								"name":"D",
+								"orderNum":3,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"Only S=>C-UDP",
+								"name":"E",
+								"orderNum":4,
+								"id":"",
+								"state":1,
+								"type":"expert",
+								"queryType":1
+							},
+							{
+								"expression":"(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"legend":"C<=>S-UDP",
+								"name":"F",
+								"orderNum":5,
+								"id":"",
 								"state":1,
 								"type":"expert",
 								"queryType":1
@@ -12364,7 +12612,7 @@
 							"thresholds":[
 								{
 									"color":"#485bad",
-									"id":"85b551"
+									"id":"91985f5"
 								}
 							],
 							"thresholdShow":true,
