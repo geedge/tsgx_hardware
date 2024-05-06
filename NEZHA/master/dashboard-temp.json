@@ -6376,11 +6376,17 @@
 						"name":"Swarmkv async latency",
 						"span":"3.0",
 						"height":"2.0",
-						"type":"Bar chart",
+						"type":"Line chart",
 						"unit":"us",
 						"weight":66,
 						"param":{
-							"orientation":"vertical",
+							"rightYAxis":{
+								"elementNames":[],
+								"unit":2,
+								"style":"line",
+								"label":""
+							},
+							"stack":0,
 							"color":{
 								"mode":"palette",
 								"paletteColors":[
@@ -6419,27 +6425,36 @@
 							},
 							"showHeader":1,
 							"link":"",
-							"displayMode":"basic",
-							"thresholds":[],
+							"tooltip":{
+								"mode":"all",
+								"sort":"none"
+							},
+							"thresholds":[
+								{
+									"color":"#af6ef4",
+									"id":"3fa0be8c"
+								}
+							],
+							"thresholdShow":true,
 							"enable":{
+								"rightYAxis":false,
 								"thresholds":false,
 								"visibility":false,
 								"legend":true,
+								"tooltip":true,
 								"valueMapping":false
 							},
 							"valueMapping":[],
-							"text":"value",
 							"dataLink":[],
-							"nullType":"null",
-							"statistics":"last"
+							"nullType":"null"
 						},
 						"remark":"",
 						"x":"9.0",
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.10\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.10\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P10",
 								"name":"A",
 								"orderNum":0,
 								"id":"",
@@ -6448,8 +6463,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.50\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.50\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P50",
 								"name":"B",
 								"orderNum":1,
 								"id":"",
@@ -6458,8 +6473,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.80\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.80\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P80",
 								"name":"C",
 								"orderNum":2,
 								"id":"",
@@ -6468,8 +6483,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.90\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.90\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P90",
 								"name":"D",
 								"orderNum":3,
 								"id":"",
@@ -6478,8 +6493,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.95\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.95\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P95",
 								"name":"E",
 								"orderNum":4,
 								"id":"",
@@ -6488,8 +6503,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"(shaping_global_async_delay_us{quantile=\"0.99\"} / ignoring (le)shaping_global_async_delay_us{quantile=\"+Inf\"}) * 100",
-								"legend":"",
+								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.99\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"legend":"{{serviceFunction}}-P99",
 								"name":"F",
 								"orderNum":5,
 								"id":"",
