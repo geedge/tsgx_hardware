@@ -2438,7 +2438,7 @@
 							"thresholds":[
 								{
 									"color":"#dd23af",
-									"id":"78180b1a"
+									"id":"cd5f173"
 								}
 							],
 							"thresholdShow":true,
@@ -2459,7 +2459,7 @@
 						"y":"8.0",
 						"elements":[
 							{
-								"expression":"sum(irate(hits{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", security_rule_action=\"Monitor\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(hits{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", monitor_rule=\"Monitor\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -2622,7 +2622,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"6dde268"
+									"id":"aa8430f"
 								}
 							],
 							"thresholdShow":true,
@@ -2661,7 +2661,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"SESSION-RECORD\"}[2m] ))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=~\"SESSION-RECORD.*\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -3100,7 +3100,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"c56d837"
+									"id":"fafe509"
 								}
 							],
 							"thresholdShow":true,
@@ -3121,7 +3121,7 @@
 						"y":"10.0",
 						"elements":[
 							{
-								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRANSACTION-RECORD\"}[2m] ))\nby (serviceFunction)",
+								"expression":"sum(irate(ok{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=~\"TRANSACTION-RECORD.*\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Success",
 								"name":"A",
 								"orderNum":0,
@@ -3213,7 +3213,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"2fd5204a"
+									"id":"646349db"
 								}
 							],
 							"thresholdShow":true,
@@ -3254,7 +3254,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"VOIP-RECORD\"}[2m] ))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=~\"VOIP-RECORD.*\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -3326,7 +3326,7 @@
 							"thresholds":[
 								{
 									"color":"#ed10c4",
-									"id":"b4651f8"
+									"id":"7bfbe65e"
 								}
 							],
 							"thresholdShow":true,
@@ -3367,7 +3367,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=\"TRAFFIC-FILE-STREAM-RECORD\"}[2m] ))\nby (serviceFunction)",
+								"expression":"sum(irate(error{asset=\"{{asset.name}}\", app_name=\"firewall\", component=\"firewall\", sendlog=~\"TRAFFIC-FILE-STREAM-RECORD.*\"}[2m] ))\nby (serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"C",
 								"orderNum":2,
@@ -9014,7 +9014,7 @@
 							"thresholds":[
 								{
 									"color":"#e23b9a",
-									"id":"7c82835f"
+									"id":"c8ceaa4"
 								}
 							],
 							"thresholdShow":true,
@@ -9061,7 +9061,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(hits{app_name=\"firewall\", component=\"firewall\", security_rule_action=\"Monitor\"}[2m]))",
+								"expression":"sum(irate(hits{app_name=\"firewall\", component=\"firewall\", monitor_rule=\"Monitor\"}[2m]))",
 								"legend":"Monitor",
 								"name":"A",
 								"orderNum":3,
