@@ -9791,7 +9791,7 @@
 							"thresholds":[
 								{
 									"color":"#e5e23d",
-									"id":"578ab678"
+									"id":"5f20838"
 								}
 							],
 							"thresholdShow":true,
@@ -9812,8 +9812,8 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-monitor",
+								"expression":"sum(irate(tfe3a_intcp_mon_num{component=\"proxy\"}[2m]))",
+								"legend":"monitor",
 								"name":"monitor",
 								"orderNum":0,
 								"id":"",
@@ -9822,8 +9822,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_deny_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-deny",
+								"expression":"sum(irate(tfe3a_intcp_deny_num{component=\"proxy\"}[2m]))",
+								"legend":"deny",
 								"name":"deny",
 								"orderNum":1,
 								"id":"",
@@ -9832,8 +9832,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_rdirt_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-redirect",
+								"expression":"sum(irate(tfe3a_intcp_rdirt_num{component=\"proxy\"}[2m]))",
+								"legend":"redirect",
 								"name":" redirect",
 								"orderNum":2,
 								"id":"",
@@ -9842,8 +9842,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_repl_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-replace",
+								"expression":"sum(irate(tfe3a_intcp_repl_num{component=\"proxy\"}[2m])) ",
+								"legend":"replace",
 								"name":" replace",
 								"orderNum":3,
 								"id":"",
@@ -9852,8 +9852,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_hijk_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-hijack",
+								"expression":"sum(irate(tfe3a_intcp_hijk_num{component=\"proxy\"}[2m]))",
+								"legend":"hijack",
 								"name":"hijack",
 								"orderNum":4,
 								"id":"",
@@ -9862,8 +9862,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_ins_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-insert",
+								"expression":"sum(irate(tfe3a_intcp_ins_num{component=\"proxy\"}[2m]))",
+								"legend":"insert",
 								"name":"insert",
 								"orderNum":5,
 								"id":"",
@@ -9872,8 +9872,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_allow_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-allow",
+								"expression":"sum(irate(tfe3a_intcp_allow_num{component=\"proxy\"}[2m]))",
+								"legend":"allow",
 								"name":"allow",
 								"orderNum":6,
 								"id":"",
@@ -9882,8 +9882,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-edit element",
+								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{component=\"proxy\"}[2m])) ",
+								"legend":"edit element",
 								"name":"edit element",
 								"orderNum":7,
 								"id":"",
@@ -9892,8 +9892,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_rus_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-run script",
+								"expression":"sum(irate(tfe3a_intcp_rus_num{component=\"proxy\"}[2m])) ",
+								"legend":"run script",
 								"name":"run script",
 								"orderNum":8,
 								"id":"",
@@ -14412,7 +14412,7 @@
 							"thresholds":[
 								{
 									"color":"#efed51",
-									"id":"e56d196"
+									"id":"277edb34"
 								}
 							],
 							"thresholdShow":true,
@@ -14433,8 +14433,8 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(tfe3a_intcp_mon_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-monitor",
+								"expression":"sum(irate(tfe3a_intcp_mon_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-monitor",
 								"name":"monitor",
 								"orderNum":0,
 								"id":"",
@@ -14443,8 +14443,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_deny_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-deny",
+								"expression":"sum(irate(tfe3a_intcp_deny_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-deny",
 								"name":"deny",
 								"orderNum":1,
 								"id":"",
@@ -14453,8 +14453,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_rdirt_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-redirect",
+								"expression":"sum(irate(tfe3a_intcp_rdirt_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-redirect",
 								"name":" redirect",
 								"orderNum":2,
 								"id":"",
@@ -14463,8 +14463,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_repl_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-replace",
+								"expression":"sum(irate(tfe3a_intcp_repl_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-replace",
 								"name":"replace",
 								"orderNum":3,
 								"id":"",
@@ -14473,8 +14473,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_hijk_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-hijack",
+								"expression":"sum(irate(tfe3a_intcp_hijk_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-hijack",
 								"name":"hijack",
 								"orderNum":4,
 								"id":"",
@@ -14483,8 +14483,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_ins_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-insert",
+								"expression":"sum(irate(tfe3a_intcp_ins_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-insert",
 								"name":"insert",
 								"orderNum":5,
 								"id":"",
@@ -14493,8 +14493,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_allow_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-allow",
+								"expression":"sum(irate(tfe3a_intcp_allow_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-allow",
 								"name":"allow",
 								"orderNum":6,
 								"id":"",
@@ -14503,8 +14503,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-edit element",
+								"expression":"sum(irate(tfe3a_intcp_edit_elem_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-edit element",
 								"name":"edit element",
 								"orderNum":7,
 								"id":"",
@@ -14513,8 +14513,8 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(tfe3a_intcp_rus_num{asset=\"{{asset.name}}\"}[2m])) by (serviceFunction)",
-								"legend":"{{serviceFunction}}-run script",
+								"expression":"sum(irate(tfe3a_intcp_rus_num{component=\"proxy\"}[2m])) by (datacenter)",
+								"legend":"{{datacenter}}-run script",
 								"name":"run script",
 								"orderNum":8,
 								"id":"",
