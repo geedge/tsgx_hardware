@@ -1504,7 +1504,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Ipv4_Bit{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Ipv4_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -1513,7 +1513,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Ipv4_Bit{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Ipv4_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"C",
 								"orderNum":1,
@@ -1605,7 +1605,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Ipv6_Bit{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Ipv6_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -1614,7 +1614,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Ipv6_Bit{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Ipv6_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -1706,7 +1706,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Udp_Bit{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Udp_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -1715,7 +1715,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Bit{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Udp_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -1807,7 +1807,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Unknown_Bit{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Unknown_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -1816,7 +1816,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Unknown_Bit{asset=\"{{asset.name}}\"}[5m])) ",
+								"expression":"sum(irate(Unknown_Bit{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) ",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -1908,7 +1908,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(sapp4_Tcp_Concurrent{asset=\"{{asset.name}}\"}) by(serviceFunction)",
+								"expression":"sum(Tcp_Concurrent{app_name=\"sapp4\",asset=\"{{asset.name}}\"}) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -1917,7 +1917,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(sapp4_Tcp_Concurrent{asset=\"{{asset.name}}\"})",
+								"expression":"sum(Tcp_Concurrent{app_name=\"sapp4\",asset=\"{{asset.name}}\"})",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -2009,7 +2009,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Tcp_Link_New{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -2018,7 +2018,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_New{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Link_New{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -2027,7 +2027,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Link_New{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Udp_Link_New{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-UDP",
 								"name":"C",
 								"orderNum":2,
@@ -2037,7 +2037,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Link_New{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Udp_Link_New{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-UDP",
 								"name":"D",
 								"orderNum":3,
@@ -2130,7 +2130,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Tcp_Link_Del{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -2139,7 +2139,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_Del{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Link_Del{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -2148,7 +2148,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Link_Del{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Udp_Link_Del{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-UDP",
 								"name":"C",
 								"orderNum":2,
@@ -2158,7 +2158,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Link_Del{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Udp_Link_Del{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-UDP",
 								"name":"D",
 								"orderNum":3,
@@ -2251,7 +2251,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_Double{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Tcp_Link_Double{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -2260,7 +2260,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_Double{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Link_Double{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -2352,7 +2352,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_C2S{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Tcp_Link_C2S{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -2361,7 +2361,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_C2S{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Link_C2S{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -2453,7 +2453,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_S2C{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(Tcp_Link_S2C{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -2462,7 +2462,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Link_S2C{asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Link_S2C{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -3002,13 +3002,13 @@
 						"y":"6.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Tcp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Tcp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"state":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Tcp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"state":1
@@ -3097,7 +3097,7 @@
 						"y":"6.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Udp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Udp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -3106,7 +3106,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Udp_Bypass_STM{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -3198,7 +3198,7 @@
 						"y":"6.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Dup_Tcp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Dup_Tcp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -3207,7 +3207,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Dup_Tcp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Dup_Tcp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -3299,7 +3299,7 @@
 						"y":"6.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Dup_Udp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(Dup_Udp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -3308,7 +3308,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Dup_Udp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
+								"expression":"sum(irate(Dup_Udp_Pkt{app_name=\"sapp4\",asset=\"{{asset.name}}\"}[5m]))",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -5755,7 +5755,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_ctrl_active{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(ctrl_active{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Open",
 								"name":"Open",
 								"orderNum":0,
@@ -5765,7 +5765,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_ctrl_sf_close{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(ctrl_sf_close{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Close",
 								"name":"Close",
 								"orderNum":1,
@@ -5858,7 +5858,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_session_num{asset=\"{{asset.name}}\"}) by(serviceFunction)",
+								"expression":"sum(curr_session_num{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}) by(serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -5868,7 +5868,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_curr_session_num{asset=\"{{asset.name}}\"})",
+								"expression":"sum(curr_session_num{app_name=\"shaping_global\",asset=\"{{asset.name}}\"})",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -5961,7 +5961,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_queueing_pkts{asset=\"{{asset.name}}\"}) by(serviceFunction)",
+								"expression":"sum(curr_queueing_pkts{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}) by(serviceFunction)",
 								"legend":"{{serviceFunction}}",
 								"name":"A",
 								"orderNum":0,
@@ -5971,7 +5971,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_curr_queueing_pkts{asset=\"{{asset.name}}\"})",
+								"expression":"sum(curr_queueing_pkts{app_name=\"shaping_global\",asset=\"{{asset.name}}\"})",
 								"legend":"sum",
 								"name":"B",
 								"orderNum":1,
@@ -6064,7 +6064,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_rx_bytes{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-RX",
 								"name":"RX",
 								"orderNum":0,
@@ -6074,7 +6074,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_tx_bytes{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-TX",
 								"name":"TX",
 								"orderNum":1,
@@ -6084,7 +6084,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_bytes{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_drop_bytes{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -6177,7 +6177,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_rx_pkts{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-RX",
 								"name":"RX",
 								"orderNum":0,
@@ -6187,7 +6187,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_tx_pkts{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-TX",
 								"name":"TX",
 								"orderNum":1,
@@ -6197,7 +6197,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_pkts{asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
+								"expression":"sum(irate(shape_drop_pkts{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -6290,7 +6290,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_async{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(async{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Invoke",
 								"name":"Invoke",
 								"orderNum":0,
@@ -6300,7 +6300,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_async_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(async_cb{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Callback",
 								"name":"Callback",
 								"orderNum":1,
@@ -6393,7 +6393,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_tconsume{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(tconsume{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Invoke",
 								"name":"Invoke",
 								"orderNum":0,
@@ -6403,7 +6403,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_tconsume_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(tconsume_cb{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Callback",
 								"name":"Callback",
 								"orderNum":1,
@@ -6413,7 +6413,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_tconsume_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(tconsume_failed{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"Failed",
 								"orderNum":2,
@@ -6506,7 +6506,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_hincrby{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hincrby{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Invoke",
 								"name":"Invoke",
 								"orderNum":0,
@@ -6516,7 +6516,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_hincrby_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hincrby_cb{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Callback",
 								"name":"Callback",
 								"orderNum":1,
@@ -6526,7 +6526,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_hincrby_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hincrby_failed{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"Failed",
 								"orderNum":2,
@@ -6619,7 +6619,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_hmget{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hmget{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Invoke",
 								"name":"Invoke",
 								"orderNum":0,
@@ -6629,7 +6629,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_hmget_cb{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hmget_cb{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Callback",
 								"name":"Callback",
 								"orderNum":1,
@@ -6639,7 +6639,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_hmget_failed{asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
+								"expression":"sum(irate(hmget_failed{app_name=\"shaping_global\",asset=\"{{asset.name}}\"}[5m])) by(serviceFunction)",
 								"legend":"{{serviceFunction}}-Failed",
 								"name":"Failed",
 								"orderNum":2,
@@ -6732,7 +6732,7 @@
 						"y":"4.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.10\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.10\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P10",
 								"name":"A",
 								"orderNum":0,
@@ -6742,7 +6742,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.50\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.50\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P50",
 								"name":"B",
 								"orderNum":1,
@@ -6752,7 +6752,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.80\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.80\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P80",
 								"name":"C",
 								"orderNum":2,
@@ -6762,7 +6762,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.90\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.90\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P90",
 								"name":"D",
 								"orderNum":3,
@@ -6772,7 +6772,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.95\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.95\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P95",
 								"name":"E",
 								"orderNum":4,
@@ -6782,7 +6782,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(shaping_global_async_delay_us{quantile=\"0.99\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
+								"expression":"sum(async_delay_us{app_name=\"shaping_global\",quantile=\"0.99\", asset=\"{{asset.name}}\"}) by (serviceFunction)",
 								"legend":"{{serviceFunction}}-P99",
 								"name":"F",
 								"orderNum":5,
@@ -8717,7 +8717,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(rate(sapp4_Tcp_Link_New{component=\"firewall\"}[2m]))",
+								"expression":"sum(rate(Tcp_Link_New{component=\"firewall\"}[2m]))",
 								"legend":"Open-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -8726,7 +8726,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(rate(sapp4_Tcp_Link_Del{component=\"firewall\"}[2m]))",
+								"expression":"sum(rate(Tcp_Link_Del{component=\"firewall\"}[2m]))",
 								"legend":"Close-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -8735,7 +8735,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(rate(sapp4_Udp_Link_New{component=\"firewall\"}[2m]))",
+								"expression":"sum(rate(Udp_Link_New{component=\"firewall\"}[2m]))",
 								"legend":"Open-UDP",
 								"name":"C",
 								"orderNum":2,
@@ -8745,7 +8745,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(rate(sapp4_Udp_Link_Del{component=\"firewall\"}[2m]))",
+								"expression":"sum(rate(Udp_Link_Del{component=\"firewall\"}[2m]))",
 								"legend":"Close-UDP",
 								"name":"D",
 								"orderNum":3,
@@ -8837,7 +8837,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(sapp4_Tcp_Concurrent{component=\"firewall\"})",
+								"expression":"sum(Tcp_Concurrent{component=\"firewall\"})",
 								"legend":"Concurrent-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -8846,7 +8846,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(sapp4_Udp_Concurrent{component=\"firewall\"})",
+								"expression":"sum(Udp_Concurrent{component=\"firewall\"})",
 								"legend":"Concurrent-UDP",
 								"name":"B",
 								"orderNum":1,
@@ -8938,7 +8938,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m]))) /(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Tcp_Link_C2S{component=\"firewall\"}[2m]))) /(sum(irate(Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"Only C=>S-TCP",
 								"name":"A",
 								"orderNum":0,
@@ -8947,7 +8947,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Tcp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"Only S=>C-TCP",
 								"name":"B",
 								"orderNum":1,
@@ -8956,7 +8956,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) )/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Tcp_Link_Double{component=\"firewall\"}[2m])) )/(sum(irate(Tcp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"C<=>S-TCP",
 								"name":"C",
 								"orderNum":2,
@@ -8965,7 +8965,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Udp_Link_C2S{component=\"firewall\"}[2m])))/(sum(irate(Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"Only C=>S-UDP",
 								"name":"D",
 								"orderNum":3,
@@ -8975,7 +8975,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Udp_Link_S2C{component=\"firewall\"}[2m])))/(sum(irate(Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"Only S=>C-UDP",
 								"name":"E",
 								"orderNum":4,
@@ -8985,7 +8985,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])))/(sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[2m])))",
+								"expression":"(sum(irate(Udp_Link_Double{component=\"firewall\"}[2m])))/(sum(irate(Udp_Link_Double{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[2m])) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[2m])))",
 								"legend":"C<=>S-UDP",
 								"name":"F",
 								"orderNum":5,
@@ -9077,7 +9077,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(sapp4_Ipv4_Bit{component=\"firewall\"}[2m]))",
+								"expression":"sum(irate(Ipv4_Bit{component=\"firewall\"}[2m]))",
 								"legend":"IPv4",
 								"name":"A",
 								"orderNum":0,
@@ -9086,7 +9086,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Ipv6_Bit{component=\"firewall\"}[2m]))",
+								"expression":"sum(irate(Ipv6_Bit{component=\"firewall\"}[2m]))",
 								"legend":"IPv6",
 								"name":"B",
 								"orderNum":1,
@@ -9095,7 +9095,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Tcp_Bit{component=\"firewall\"}[2m]))",
+								"expression":"sum(irate(Tcp_Bit{component=\"firewall\"}[2m]))",
 								"legend":"TCP",
 								"name":"C",
 								"orderNum":2,
@@ -9104,7 +9104,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Udp_Bit{component=\"firewall\"}[2m]))",
+								"expression":"sum(irate(Udp_Bit{component=\"firewall\"}[2m]))",
 								"legend":"UDP",
 								"name":"D",
 								"orderNum":3,
@@ -9113,7 +9113,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(sapp4_Unknown_Bit{component=\"firewall\"}[2m]))",
+								"expression":"sum(irate(Unknown_Bit{component=\"firewall\"}[2m]))",
 								"legend":"Unknown",
 								"name":"E",
 								"orderNum":4,
@@ -10324,7 +10324,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(rate(shaping_global_ctrl_active{component=\"shaping\"}[2m]))",
+								"expression":"sum(rate(ctrl_active{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"Open",
 								"name":"Open",
 								"orderNum":0,
@@ -10334,7 +10334,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(rate(shaping_global_ctrl_sf_close{component=\"shaping\"}[2m]))",
+								"expression":"sum(rate(ctrl_sf_close{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"Close",
 								"name":"Close",
 								"orderNum":1,
@@ -10427,7 +10427,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_session_num{component=\"shaping\"})",
+								"expression":"sum(curr_session_num{app_name=\"shaping_global\",component=\"shaping\"})",
 								"legend":"Concurrent",
 								"name":"Concurrent",
 								"orderNum":0,
@@ -10520,7 +10520,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_pkts{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_rx_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"RX",
 								"name":"RX",
 								"orderNum":0,
@@ -10530,7 +10530,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_pkts{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_tx_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"TX",
 								"name":"TX",
 								"orderNum":1,
@@ -10540,7 +10540,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_pkts{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_drop_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -10633,7 +10633,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_rx_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"RX",
 								"name":"RX",
 								"orderNum":0,
@@ -10643,7 +10643,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_bytes{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_tx_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"TX",
 								"name":"TX",
 								"orderNum":1,
@@ -10653,7 +10653,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_bytes{component=\"shaping\"}[2m]))",
+								"expression":"sum(irate(shape_drop_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m]))",
 								"legend":"DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -10746,7 +10746,7 @@
 						"y":"2.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_queueing_pkts{component=\"shaping\"})",
+								"expression":"sum(curr_queueing_pkts{app_name=\"shaping_global\",component=\"shaping\"})",
 								"legend":"Queueing packets",
 								"name":"A",
 								"orderNum":0,
@@ -12835,7 +12835,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"((sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter))/(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter)))*100 > 0",
+								"expression":"((sum(irate(Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter))/(sum(irate(Tcp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter)))*100 > 0",
 								"legend":"{{datacenter}}",
 								"name":"A",
 								"orderNum":0,
@@ -12926,7 +12926,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"(sum(irate(sapp4_Tcp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(sapp4_Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter)) > 0",
+								"expression":"(sum(irate(Tcp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Tcp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Tcp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_Double{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_C2S{component=\"firewall\"}[5m])) by (datacenter) + sum(irate(Udp_Link_S2C{component=\"firewall\"}[5m])) by (datacenter)) > 0",
 								"legend":"{{datacenter}}",
 								"name":"A",
 								"orderNum":0,
@@ -14917,7 +14917,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_ctrl_active{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(ctrl_active{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-Open",
 								"name":"Open",
 								"orderNum":0,
@@ -14927,7 +14927,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_ctrl_sf_close{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(ctrl_sf_close{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-Close",
 								"name":"Close",
 								"orderNum":1,
@@ -15020,7 +15020,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_session_num{component=\"shaping\"}) by (datacenter)",
+								"expression":"sum(curr_session_num{app_name=\"shaping_global\",component=\"shaping\"}) by (datacenter)",
 								"legend":"{{datacenter}}-sessions",
 								"name":"Concurrent",
 								"orderNum":0,
@@ -15113,7 +15113,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_rx_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-RX",
 								"name":"RX",
 								"orderNum":0,
@@ -15123,7 +15123,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_tx_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_tx_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-TX",
 								"name":"TX",
 								"orderNum":1,
@@ -15133,7 +15133,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_pkts{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_drop_pkts{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -15226,7 +15226,7 @@
 						"y":"0.0",
 						"elements":[
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_rx_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-RX",
 								"name":"RX",
 								"orderNum":0,
@@ -15236,7 +15236,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_rx_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_rx_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-TX",
 								"name":"TX",
 								"orderNum":1,
@@ -15246,7 +15246,7 @@
 								"queryType":1
 							},
 							{
-								"expression":"sum(irate(shaping_global_shape_drop_bytes{component=\"shaping\"}[2m])) by (datacenter)",
+								"expression":"sum(irate(shape_drop_bytes{app_name=\"shaping_global\",component=\"shaping\"}[2m])) by (datacenter)",
 								"legend":"{{datacenter}}-DROP",
 								"name":"DROP",
 								"orderNum":2,
@@ -15339,7 +15339,7 @@
 						"y":"999.0",
 						"elements":[
 							{
-								"expression":"sum(shaping_global_curr_queueing_pkts{component=\"shaping\"}) by (datacenter)",
+								"expression":"sum(curr_queueing_pkts{app_name=\"shaping_global\",component=\"shaping\"}) by (datacenter)",
 								"legend":"{{datacenter}}-Queueing packets",
 								"name":"Queueing packets",
 								"orderNum":0,
